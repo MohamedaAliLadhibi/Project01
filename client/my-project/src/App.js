@@ -1,16 +1,14 @@
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Import BrowserRouter
 import Landing from "./components/Landing.jsx"
-import {   Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <Routes>
-      <Route path='/' element={ <Landing/>}></Route>  
-
-
-    </Routes>
-
-
+    <Router> {/* Wrap Routes in BrowserRouter */}
+      <Routes>
+        <Route path='/' element={<Landing />} /> {/* Use self-closing tag for Route element */}
+      </Routes>
+    </Router>
   );
 }
 
